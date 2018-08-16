@@ -1,0 +1,58 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="mainLayout" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <TextArea fx:id="resultColumn" maxHeight="175" editable="false" >
+            <font>
+                <Font size="20" name="TimesNewRoman bold"/>
+            </font>
+
+        </TextArea>
+    </top>
+    <right>
+        <VBox spacing="25">
+            <padding>
+                <Insets top="30"/>
+            </padding>
+            <Button text="+" fx:id="addButton" prefWidth="110" VBox.vgrow="ALWAYS" prefHeight="50" onAction="#btnPressed"/>
+            <Button text="-" fx:id="subtractButton" prefWidth="110" VBox.vgrow="ALWAYS" prefHeight="50" onAction="#btnPressed"/>
+            <Button text="/" fx:id="divideButton" prefWidth="110" VBox.vgrow="ALWAYS" prefHeight="50" onAction="#btnPressed"/>
+            <Button text="*" fx:id="multiplyButton" prefWidth="110" VBox.vgrow="ALWAYS" prefHeight="50" onAction="#btnPressed"/>
+        </VBox>
+    </right>
+    <center>
+        <FlowPane hgap="25" vgap="25" fx:id="keyBoard">
+
+
+            <padding>
+
+                <Insets topRightBottomLeft="30" />
+
+            </padding>
+            <Button text="1" fx:id="one" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="2" fx:id="two" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="3" fx:id="three" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="4" fx:id="four" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="5" fx:id="five" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="6" fx:id="six" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="7" fx:id="seven" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="8" fx:id="eight" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="9" fx:id="nine" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="0" fx:id="zero" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="=" fx:id="equal" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+            <Button text="CLS" fx:id="clear" prefWidth="110"  prefHeight="50" onAction="#btnPressed"/>
+        </FlowPane>
+
+    </center>
+
+</BorderPane>
